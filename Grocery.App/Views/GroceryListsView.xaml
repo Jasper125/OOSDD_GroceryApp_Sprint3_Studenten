@@ -11,6 +11,13 @@
         </Grid>
     </Shell.TitleView>
 
+    <VerticalStackLayout Padding="10" Spacing="10">
+
+    <SearchBar x:Name="ListsSearchBar"
+                Placeholder="Zoek in boodschappenlijsten"
+                SearchCommand="{Binding SearchGroceryListsCommand}"
+                SearchCommandParameter="{Binding Source={x:Reference ListsSearchBar}, Path=Text}" />
+
     <Border Stroke="#C49B33"
         StrokeThickness="4"
         Padding="10"
@@ -40,4 +47,5 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
     </Border>
+    </VerticalStackLayout>
 </ContentPage>
